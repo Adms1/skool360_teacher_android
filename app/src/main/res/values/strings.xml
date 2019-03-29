@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">SKOOL360 Teacher</string>
+
+
+    <!--App use String-->
+    <string name="UserName">User Name</string>
+    <string name="Password">Password</string>
+    <string name="checkbox">Remember Credentials</string>
+    <string name="Login">Log In</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="totalstudent">Total Students</string>
+    <string name="present">Present :</string>
+    <string name="absent">Absent :</string>
+    <string name="leave">Leave :</string>
+    <string name="student_name">Megha Shah</string>
+    <string name="lecture">Lecture</string>
+    <string name="timing">Timing</string>
+    <string name="standard">Grade</string>
+    <string name="classes">Section</string>
+    <string name="subject">Subject</string>
+    <string name="date">Date</string>
+    <string name="srno">Sr No.</string>
+    <string name="testname">Test Name</string>
+    <string name="grade">Grade</string>
+    <string name="edit">Edit</string>
+    <string name="grno">GRNO</string>
+    <string name="percentage">(%)</string>
+    <string name="Marks">Marks</string>
+    <string name="view"><u>View</u></string>
+    <string name="testdate">Test Date</string>
+    <string name="standardsubject">Grade-Subject</string>
+    <string name="section">Section</string>
+    <string name="test">Test</string>
+    <string name="homeworkDate">Date</string>
+    <string name="homeworkStandard">std</string>
+    <string name="homeworkClass">Class</string>
+    <string name="homeworkSubject">Subject :</string>
+    <string name="homework">Home Work</string>
+    <string name="WorkPlan">Work Plan :</string>
+    <string name="ClassWork">Class Work :</string>
+    <string name="assessment">Assessment Question</string>
+    <string name="Month">Month</string>
+    <string name="plandate">Plan Date</string>
+    <string name="chapterno"> Chapter No.</string>
+    <string name="lessonchaptername">Chapter Name</string>
+    <string name="lessonpdf">PDF</string>
+    <string name="lessonword">WORD</string>
+    <string name="alert_msg">Alert Msg</string>
+
+    <string name="workplanstandard">Standard</string>
+    <string name="workplanmonth">Month</string>
+    <string name="workstatus">Status</string>
+    <string name="workstartdate">StartDate</string>
+    <string name="workenddate">EndDate</string>
+    <string name="works">Work</string>
+    <string name="worksubject">Subject</string>
+    <string name="chaptername">Work Plan</string>
+    <string name="objective">Class Work</string>
+    <string name="leave_date">Leave Date</string>
+    <string name="approve_day">Approved Date</string>
+    <string name="reason">Reason</string>
+    <string name="cl">CL</string>
+    <string name="pl">PL</string>
+    <string name="approve_by">Approved By</string>
+    <string name="teacher_permission">Sorry, you don\'t have permission for access. This is only for class teacher.</string>
+
+    <string-array name="menuoption1">
+        <item>Home</item>
+        <item>My Profile</item>
+        <item>Attendance</item>
+        <item>Homework</item>
+        <item>Timetable</item>
+        <item>Unit Test</item>
+        <item>Results</item>
+        <item>Report Card</item>
+        <item>Fees</item>
+        <item>Imprest</item>
+        <item>Canteen</item>
+        <item>Appointment Requests</item>
+        <item>Message</item>
+        <item>Logout</item>
+    </string-array>
+    <string-array name="month">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="define_showhidepasswordedittext"></string>
+    <!-- Author section -->
+    <string name="library_showhidepasswordedittext_author">Scott Alexander-Bown</string>
+    <string name="library_showhidepasswordedittext_authorWebsite">alexander-bown.com</string>
+    <!-- Library section -->
+    <string name="library_showhidepasswordedittext_libraryName">ShowHidePasswordEditText</string>
+    <string name="library_showhidepasswordedittext_libraryDescription">Show/Hide Password EditText is a very simple extension of Android\'s EditText that puts a clickable hide/show icon in the right hand side of the EditText that allows showing of the password. </string>
+
+    <!-- Custom variables section -->
+
+</resources>

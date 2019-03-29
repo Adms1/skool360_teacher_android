@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@color/editTextcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/txtNoRecordsMarks"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_below="@+id/date_rel"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/norecordfound"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold"
+            android:visibility="gone"  />
+
+
+        <LinearLayout
+            android:id="@+id/term_linear"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/headerRel"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <Spinner
+                android:id="@+id/term_spinner"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignEnd="@+id/textView3"
+                android:layout_alignRight="@+id/textView3"
+                android:layout_below="@+id/header"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/dropdown_button"
+                android:forceHasOverlappingRendering="false"
+                android:overlapAnchor="false"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/class_linear"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/term_linear"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <Spinner
+                android:id="@+id/class_spinner"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignEnd="@+id/textView3"
+                android:layout_alignRight="@+id/textView3"
+                android:layout_below="@+id/header"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/dropdown_button"
+                android:forceHasOverlappingRendering="false"
+                android:overlapAnchor="false"/>
+            <ImageView
+                android:id="@+id/search_img"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/ic_search"
+                android:tint="@color/linear_color"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_linear"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/class_linear"
+            android:orientation="horizontal">
+
+            <anandniketan.com.skool360teacher.Utility.CustomEditText
+                android:id="@+id/search_edt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/calendar_line"
+                android:drawableRight="@drawable/ic_search"
+                android:drawableTint="@color/linear_color"
+                android:gravity="left|center"
+                android:maxLines="1"
+                android:hint="Search"
+                android:textColorHint="@color/gray"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/_7sdp"
+                android:paddingRight="@dimen/_13sdp"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Marks_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_linear"
+            android:layout_margin="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <include layout="@layout/marks_header" />
+        </LinearLayout>
+
+        <ExpandableListView
+            android:id="@+id/lvExpMarks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Marks_header"
+            android:childDivider="@android:color/transparent"
+            android:divider="@android:color/white"
+            android:dividerHeight="5dp"
+            android:groupIndicator="@null"
+            android:scrollbars="none" />
+
+    </RelativeLayout>
+</LinearLayout>

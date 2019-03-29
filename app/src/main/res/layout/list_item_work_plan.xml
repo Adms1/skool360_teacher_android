@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/workchild">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/work_txt_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.46"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="@string/works"
+                android:textColor="@color/scheduleheadertextcolor"
+                android:textSize="@dimen/_9sdp"
+                android:textStyle="normal"  />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:textAlignment="center"
+                android:text=":"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/scheduleheadertextcolor"
+                android:textSize="@dimen/_9sdp"
+                android:textStyle="normal" />
+            <TextView
+                android:id="@+id/work_name_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_1sdp"
+                android:layout_weight="1.4"
+                android:gravity="left"
+
+                android:paddingTop="@dimen/_5sdp"
+                android:text="hiiii"
+                android:textSize="@dimen/_9sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/startdate_txt_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.46"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="@string/workstartdate"
+                android:textColor="@color/scheduleheadertextcolor"
+                android:textSize="@dimen/_9sdp"
+                android:textStyle="normal" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:textAlignment="center"
+                android:text=":"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/scheduleheadertextcolor"
+                android:textSize="@dimen/_9sdp"
+                android:textStyle="normal" />
+            <TextView
+                android:id="@+id/startdate_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_1sdp"
+                android:layout_weight="1.4"
+                android:gravity="left"
+                android:paddingTop="@dimen/_5sdp"
+                android:text="hiiii"
+                android:textSize="@dimen/_9sdp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/enddate_txt_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.46"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="@string/workenddate"
+                android:textColor="@color/scheduleheadertextcolor"
+                android:textSize="@dimen/_9sdp"
+                android:textStyle="normal" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:textAlignment="center"
+                android:text=":"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/scheduleheadertextcolor"
+                android:textSize="@dimen/_9sdp"
+                android:textStyle="normal" />
+            <TextView
+                android:id="@+id/enddate_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_1sdp"
+                android:layout_weight="1.4"
+                android:gravity="left"
+                android:paddingTop="@dimen/_5sdp"
+                android:text="hiiii"
+                android:textSize="@dimen/_9sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/status_txt_view"
+                android:layout_width="0dp"
+                android:layout_weight="0.45"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="@string/workstatus"
+                android:textColor="@color/scheduleheadertextcolor"
+                android:textSize="@dimen/_9sdp"
+                android:textStyle="normal" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:textAlignment="center"
+                android:text=":"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/scheduleheadertextcolor"
+                android:textSize="@dimen/_9sdp"
+                android:textStyle="normal"/>
+            <RadioGroup
+                android:id="@+id/status_radiogroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1.3"
+
+                android:layout_marginLeft="@dimen/_1sdp">
+
+                <RadioButton
+                    android:id="@+id/done_rdb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:text="Done"
+                    android:textSize="@dimen/_9sdp" />
+
+                <RadioButton
+                    android:id="@+id/pendding_rdb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="Pendding"
+                    android:textSize="@dimen/_9sdp"/>
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

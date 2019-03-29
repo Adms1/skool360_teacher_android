@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@color/editTextcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/headerRel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/hedar_1">
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/logout_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_37sdp"
+                android:text="DAILY WORK"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/btnBacktest_homework"
+                android:layout_width="@dimen/_13sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_39sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:background="@drawable/back_btn"  />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtNoRecordshomework"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_below="@+id/date_rel"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/norecordfound"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/date_rel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_below="@+id/headerRel"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/fromDate"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/calendar_line"
+                android:gravity="center_vertical|center"
+                android:hint="DD/MM/YYYY"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textSize="@dimen/_9sdp" />
+
+            <TextView
+                android:id="@+id/toDate"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_toRightOf="@+id/fromDate"
+                android:background="@drawable/calendar_line"
+                android:gravity="center_vertical|center"
+                android:hint="DD/MM/YYYY"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textSize="@dimen/_9sdp" />
+
+            <Button
+                android:id="@+id/btnFilterHomework"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignBottom="@+id/toDate"
+                android:layout_alignTop="@+id/toDate"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_toRightOf="@+id/toDate"
+                android:background="@drawable/round_button"
+                android:padding="@dimen/_3sdp"
+                android:text="Filter"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/homework_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date_rel"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <include layout="@layout/list_homework_header" />
+        </LinearLayout>
+
+        <ExpandableListView
+            android:id="@+id/lvExpHomework"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/homework_header"
+            android:layout_margin="@dimen/_5sdp"
+            android:childDivider="@android:color/transparent"
+            android:divider="@android:color/white"
+            android:dividerHeight="@dimen/_5sdp"
+            android:groupIndicator="@null"
+            android:scrollbars="none" />
+
+    </RelativeLayout>
+</LinearLayout>
