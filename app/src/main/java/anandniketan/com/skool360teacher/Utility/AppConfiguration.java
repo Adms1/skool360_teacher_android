@@ -47,7 +47,7 @@ public class AppConfiguration {
     }
 
     //Local
-    public static String DOMAIN_LOCAL = "http://192.168.1.22:8089/MobileApp_Service.asmx/";
+    public static String DOMAIN_LOCAL = "http://192.168.1.14:8089/MobileApp_Service.asmx/";
     //public static String DOMAIN_LIVE = "http://192.168.1.7:8086/MobileApp_Service.asmx/"; //use for only office
 //    public static String LIVE_BASE_URL = Utility.getPref(BaseApp.getAppContext(), "live_base_url"); //use for client
 

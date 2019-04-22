@@ -226,7 +226,7 @@ public class Utility {
                                     if (flag.equalsIgnoreCase("0")) {
                                         Utility.setPref(context, "user_birthday_wish", "1");
                                         Utility.setPref(context, "user_birthday", "N/A");
-                                        DialogUtils.showGIFDialog(context, "Anand Niketan Bhadaj");
+                                        DialogUtils.showGIFDialog(context, "Skool 360");
 
                                     }
                                 }
@@ -292,6 +292,7 @@ public class Utility {
                         Utility.setPref(context, "unm", "");
                         Utility.setPref(context, "pwd", "");
                         Utility.setPref(context, "user_birthday", "");
+                        Utility.setPref(context, "user_birthday_wish", "0");
                         Intent i = new Intent(context, LoginActivity.class);
                         context.startActivity(i);
                         ((Activity)context).finish();

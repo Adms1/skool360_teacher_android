@@ -11,13 +11,12 @@ import anandniketan.com.skool360teacher.Utility.AppConfiguration;
 import anandniketan.com.skool360teacher.Utility.ParseJSON;
 import anandniketan.com.skool360teacher.WebServicesCall.WebServicesCall;
 
-
 /**
  * Created by admsandroid on 9/15/2017.
  */
 
-public class LoginAsyncTask   extends AsyncTask<Void, Void, ArrayList<LoginModel>> {
-    HashMap<String, String> param = new HashMap<String, String>();
+public class LoginAsyncTask extends AsyncTask<Void, Void, ArrayList<LoginModel>> {
+    HashMap<String, String> param;
 
     public LoginAsyncTask(HashMap<String, String> param) {
         this.param = param;

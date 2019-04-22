@@ -22,6 +22,10 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
+    <style name="BrushTextViewNormal" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/opensans_regular</item>
+    </style>
+
     <style name="TextAppearence.App.TextInputLayout" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/editTextcolor</item>
     </style>

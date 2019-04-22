@@ -31,7 +31,7 @@ public class DashBoardActivity extends FragmentActivity {
     Context mContext;
     ActionBarDrawerToggle mDrawerToggle;
     static RelativeLayout leftRl;
-    private String notificationMsg,notificationType;
+    private String notificationMsg,notificationType, name;
 
 
     @Override
@@ -60,8 +60,13 @@ public class DashBoardActivity extends FragmentActivity {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         AppConfiguration.firsttimeback = true;
         try {
-            notificationMsg = Utility.getPref(DashBoardActivity.this,"Push_Notification_message");
-            notificationType = Utility.getPref(DashBoardActivity.this,"notification_type");
+
+            notificationMsg = getIntent().getStringExtra("message");
+            notificationType = getIntent().getStringExtra("fromNotification");
+            name = getIntent().getStringExtra("Name");
+
+//            notificationMsg = Utility.getPref(DashBoardActivity.this,"Push_Notification_message");
+//            notificationType = Utility.getPref(DashBoardActivity.this,"notification_type");
         }catch (Exception ex){
             ex.printStackTrace();
         }
@@ -82,19 +87,14 @@ public class DashBoardActivity extends FragmentActivity {
 //            }
 //        }).show();
 
-
-
-
         try {
-
-
             if (notificationType != null) {
                 if (!TextUtils.isEmpty(notificationType)) {
                     if (notificationMsg != null) {
                         if (!TextUtils.isEmpty(notificationMsg)) {
                             if (notificationType.equalsIgnoreCase("Birthday")) {
 
-                                String name = Utility.getPref(DashBoardActivity.this, "notification_name");
+//                                String name = Utility.getPref(DashBoardActivity.this, "notification_name");
 
                                 if (name != null) {
                                     if (!TextUtils.isEmpty(name)) {
@@ -128,9 +128,9 @@ public class DashBoardActivity extends FragmentActivity {
     private void Initialize() {
         // TODO Auto-generated method stub
 
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        leftRl = (RelativeLayout) findViewById(R.id.whatYouWantInLeftDrawer);
-        mDrawerList = (ListView) findViewById(R.id.list_slidermenu);
+        mDrawerLayout = findViewById(R.id.drawer_layout);
+        leftRl = findViewById(R.id.whatYouWantInLeftDrawer);
+        mDrawerList = findViewById(R.id.list_slidermenu);
 
     }
 

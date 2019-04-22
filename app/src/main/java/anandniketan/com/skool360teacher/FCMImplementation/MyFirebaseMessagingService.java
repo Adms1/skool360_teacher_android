@@ -17,6 +17,7 @@ import com.google.firebase.messaging.RemoteMessage;
 
 import java.util.List;
 
+import anandniketan.com.skool360teacher.Activities.DashBoardActivity;
 import anandniketan.com.skool360teacher.Activities.LoginActivity;
 import anandniketan.com.skool360teacher.R;
 
@@ -95,7 +96,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private void sendNotification(RemoteMessage remoteMessage) {
         notifyID = (int) (System.currentTimeMillis() & 0xfffffff);
 
-        Intent notificationIntent = new Intent(ctx,LoginActivity.class);
+        Intent notificationIntent = new Intent(ctx, DashBoardActivity.class);
 
 
         String data = String.valueOf(remoteMessage.getData());
@@ -118,7 +119,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Log.d("Messsagetype", String.valueOf(remoteMessage.getData()));
 
         notificationIntent.setAction(String.valueOf(notifyID));
-        notificationIntent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+//        notificationIntent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
         PendingIntent pendingNotificationIntent = PendingIntent.getActivity(ctx, notifyID, notificationIntent,PendingIntent.FLAG_UPDATE_CURRENT);
 
@@ -129,7 +130,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 .setTicker(String.valueOf(remoteMessage.getData().get("body")))
                 .setWhen(System.currentTimeMillis())
                 .setContentTitle(getString(R.string.app_name))//Bhadaj
-                .setContentText(remoteMessage.getData().get("body"))//remoteMessage.getNotification().getBody()
+                .setContentText(remoteMessage.getData().get("body") + " from " + remoteMessage.getData().get("Name"))//remoteMessage.getNotification().getBody()
                 .setContentIntent(pendingNotificationIntent)
                 .setAutoCancel(true).build();
 

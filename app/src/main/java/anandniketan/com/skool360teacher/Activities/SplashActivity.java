@@ -11,7 +11,7 @@ import anandniketan.com.skool360teacher.Utility.Utility;
 public class SplashActivity extends AppCompatActivity {
 
     private final int SPLASH_DISPLAY_LENGTH = 2000;
-    private String notificationMsg;
+    private String notificationMsg, notificationType, name;
 
     /** Called when the activity is first created. */
     @Override
@@ -28,6 +28,12 @@ public class SplashActivity extends AppCompatActivity {
                 Intent mainIntent = new Intent(SplashActivity.this,LoginActivity.class);
                 try {
                     notificationMsg = getIntent().getStringExtra("message");
+                    notificationType = getIntent().getStringExtra("fromNotification");
+                    try {
+                        name = getIntent().getExtras().getString("Name");
+                    }catch (Exception ex){
+                        ex.printStackTrace();
+                    }
                     if (notificationMsg != null) {
                         Utility.setPref(SplashActivity.this, "Push_Notification_message", notificationMsg);
                     }

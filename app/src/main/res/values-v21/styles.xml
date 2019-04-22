@@ -23,6 +23,9 @@
         <item name="android:textStyle">normal</item>
     </style>
 
+    <style name="BrushTextViewNormal" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/opensans_regular</item>
+    </style>
 
     <style name="myDialog" parent="Theme.AppCompat.Dialog">
         <item name="android:windowNoTitle">true</item>

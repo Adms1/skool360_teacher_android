@@ -138,7 +138,7 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void run() {
                                 try {
-                                    HashMap<String, String> params = new HashMap<String, String>();
+                                    HashMap<String, String> params = new HashMap<>();
                                     params.put("UserID", UserNameEdt.getText().toString().trim());
                                     params.put("Password",PasswordEdt.getText().toString().trim());
 
@@ -161,7 +161,7 @@ public class LoginActivity extends AppCompatActivity {
                                                 Utility.setPref(mContext, "DepratmentID", logindetailModels.get(0).getDepratmentID());
                                                 Utility.setPref(mContext, "DesignationID", logindetailModels.get(0).getDesignationID());
                                                 Utility.setPref(mContext, "DeviceId", logindetailModels.get(0).getDeviceId());
-                                                Utility.setPref(mContext, "LocationId", "2");
+                                                Utility.setPref(mContext, "LocationId", logindetailModels.get(0).getLocationID());
                                                 Utility.pong(mContext, "Login Successful");
 
 
@@ -171,7 +171,7 @@ public class LoginActivity extends AppCompatActivity {
                                                     hashMap.put("DeviceId",Settings.Secure.getString(getApplicationContext().getContentResolver(),Settings.Secure.ANDROID_ID));
                                                     hashMap.put("TokenId",Utility.getPref(getApplicationContext(), "registration_id"));
                                                     hashMap.put("DeviceType","A");
-
+                                                    hashMap.put("LocationID", Utility.getPref(getApplicationContext(), "LocationId"));
                                                     AddDeviceDetailAsyncTask addDeviceDetailAsyncTask = new AddDeviceDetailAsyncTask(hashMap);
                                                     boolean result = addDeviceDetailAsyncTask.execute().get();
 
@@ -186,6 +186,7 @@ public class LoginActivity extends AppCompatActivity {
                                                     notificationMsg = Utility.getPref( LoginActivity.this,"Push_Notification_message");
                                                     if(notificationMsg != null){
                                                         intentDashboard.putExtra( "message",notificationMsg);
+                                                        intentDashboard.putExtra( "name",notificationMsg);
                                                     }
                                                 }catch (Exception ex){
                                                     ex.printStackTrace();
