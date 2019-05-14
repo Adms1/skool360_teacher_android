@@ -6,7 +6,7 @@
     tools:context=".Activities.LoginActivity"
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
-    android:background="@drawable/login_back"
+    android:background="@drawable/main_bg"
     android:layout_height="match_parent">
 
     <!--<ScrollView-->

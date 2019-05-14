@@ -14,7 +14,7 @@ public class AppConfiguration {
         LIVE, LOCAL
     }
 
-    static Domain domain = Domain.LOCAL;//only Change this for changing environment
+    static Domain domain = Domain.LIVE;//only Change this for changing environment
 
     public static String getBaseUrl() {
         String url = "";
